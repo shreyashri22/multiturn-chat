@@ -14,7 +14,7 @@ import os
 os.environ["OPENAI_API_KEY"]=<your key>
 os.environ["pinecone_api"]=<your key>
 
-pinecone.init(api_key=os.environ["pinecone_api"], environment="us-east-1-aws")
+pinecone.init(api_key=os.environ["pinecone_api"], environment=<your env>)
 openai.api_key=os.environ["OPENAI_API_KEY"]
 
 index_name = 'accel-local'
@@ -55,7 +55,7 @@ def Ask_bot(query,session_no):
     )
 
     message_history = RedisChatMessageHistory(
-    url="redis://default:zyRNg3pQk44tfbpw4fQauy1lsuacbDdA@redis-19775.c10.us-east-1-4.ec2.cloud.redislabs.com:19775", ttl=600, session_id=session_no
+    url=<your url>, ttl=600, session_id=session_no
     )
     # message_history.add_user_message(query)
     # message_history.clear()
