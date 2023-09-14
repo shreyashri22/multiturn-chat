@@ -73,7 +73,7 @@ def Ask_bot(query,session_no):
     )
 
     res=agent_chain.run(input=query)
-    message_history.clear()
+    # message_history.clear()
     # message_history.add_ai_message(res)
     print(message_history.messages)
     return res
