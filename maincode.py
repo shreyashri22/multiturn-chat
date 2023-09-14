@@ -59,7 +59,7 @@ def Ask_bot(query,session_no):
     )
     # message_history.add_user_message(query)
     # message_history.clear()
-    if len(message_history.messages)>2:
+    if len(message_history.messages)>10:
         message_history.clear()
 
     memory = ConversationBufferWindowMemory(k=10,
