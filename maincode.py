@@ -11,8 +11,8 @@ from langchain import OpenAI, LLMChain
 import openai
 import os
 
-os.environ["OPENAI_API_KEY"]="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"
-os.environ["pinecone_api"]="85ab78b0-c759-49f7-ac09-8f6bcf1aab8a"
+os.environ["OPENAI_API_KEY"]=<your key>
+os.environ["pinecone_api"]=<your key>
 
 pinecone.init(api_key=os.environ["pinecone_api"], environment="us-east-1-aws")
 openai.api_key=os.environ["OPENAI_API_KEY"]
